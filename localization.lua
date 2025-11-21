@@ -8,6 +8,7 @@ MINIMAGE_VERSION = "1.18";
 -- MiniMage (English)
 -- Compiled by Robert Fernandes
 -- warcraft@bovilexics.com
+-- Modifed and reposted by Olzon, cannot find original GitHub repo
 -- Last Update on 11/20/2025
 
 --]]
