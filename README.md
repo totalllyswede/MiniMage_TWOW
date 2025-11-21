@@ -14,14 +14,14 @@ MiniMage_TWOW is a lightweight World of Warcraft addon designed for Mages, provi
 
 ## Installation
 
-# TurtleWoW Launcher Install (Recommended) 
+### TurtleWoW Launcher Install (Recommended) 
 
 1. Open the launcher and navigate to the "AddOns" tab.
 2. Click "+ Add New Addon"  button.
 3. Paste the GitHub URL of the addon and click "Install".
 The launcher will automatically download and install the addon and keep it updated
 
-# Manual Install
+### Manual Install
 
 1. Download the repository into your `Interface/AddOns/` folder.
 2. Ensure the folder structure is `MiniMage_TWOW/MiniMage.lua`.
