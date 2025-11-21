@@ -38,7 +38,6 @@ The launcher will automatically download and install the addon and keep it updat
 
 * Click the minimap button to open the dropdown menu.
 * Select the desired portal or teleport.
-* Only visible to Mages; hides automatically for other classes.
 
 ## Contributing
 
