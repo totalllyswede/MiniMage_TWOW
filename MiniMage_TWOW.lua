@@ -131,23 +131,23 @@ function MM_DropDown_ForTheHorde()
 	UIDropDownMenu_AddButton(info);
 
 	info = { };
-	info.text = MINIMAGE_LABEL_HORDE0;
-	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_HORDE0); end;
+	info.text = MINIMAGE_LABEL_ORG;
+	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_ORG); end;
 	UIDropDownMenu_AddButton(info);
 
 	info = { };
-	info.text = MINIMAGE_LABEL_HORDE1;
-	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_HORDE1); end;
+	info.text = MINIMAGE_LABEL_STONARD;
+	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_STONARD); end;
 	UIDropDownMenu_AddButton(info);
 
 	info = { };
-	info.text = MINIMAGE_LABEL_HORDE3;
-	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_HORDE3); end;
+	info.text = MINIMAGE_LABEL_TB;
+	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_TB); end;
 	UIDropDownMenu_AddButton(info);
 
 	info = { };
-	info.text = MINIMAGE_LABEL_HORDE2;
-	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_HORDE2); end;
+	info.text = MINIMAGE_LABEL_UC;
+	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_UC); end;
 	UIDropDownMenu_AddButton(info);
 
 	info = { };
@@ -157,23 +157,23 @@ function MM_DropDown_ForTheHorde()
 	UIDropDownMenu_AddButton(info);
 
 	info = { };
-	info.text = MINIMAGE_LABEL_HORDE0;
-	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_HORDE0); end;
+	info.text = MINIMAGE_LABEL_ORG;
+	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_ORG); end;
 	UIDropDownMenu_AddButton(info);
 
 	info = { };
-	info.text = MINIMAGE_LABEL_HORDE1;
-	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_HORDE1); end;
+	info.text = MINIMAGE_LABEL_STONARD;
+	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_STONARD); end;
 	UIDropDownMenu_AddButton(info);
 
 	info = { };
-	info.text = MINIMAGE_LABEL_HORDE3;
-	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_HORDE3); end;
+	info.text = MINIMAGE_LABEL_TB;
+	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_TB); end;
 	UIDropDownMenu_AddButton(info);
 
 	info = { };
-	info.text = MINIMAGE_LABEL_HORDE2;
-	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_HORDE2); end;
+	info.text = MINIMAGE_LABEL_UC;
+	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_UC); end;
 	UIDropDownMenu_AddButton(info);
 end
 
@@ -187,23 +187,28 @@ function MM_DropDown_ForTheAlliance()
 	UIDropDownMenu_AddButton(info);
 	
 	info = { };
-	info.text = MINIMAGE_LABEL_ALLIANCE3;
-	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_ALLIANCE3); end;
+	info.text = MINIMAGE_LABEL_ALAH;
+	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_ALAH); end;
 	UIDropDownMenu_AddButton(info);
 
 	info = { };
-	info.text = MINIMAGE_LABEL_ALLIANCE0;
-	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_ALLIANCE0); end;
+	info.text = MINIMAGE_LABEL_DARNASSUS;
+	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_DARNASSUS); end;
 	UIDropDownMenu_AddButton(info);
 
 	info = { };
-	info.text = MINIMAGE_LABEL_ALLIANCE1;
-	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_ALLIANCE1); end;
+	info.text = MINIMAGE_LABEL_IF;
+	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_IF); end;
 	UIDropDownMenu_AddButton(info);
 
 	info = { };
-	info.text = MINIMAGE_LABEL_ALLIANCE2;
-	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_ALLIANCE2); end;
+	info.text = MINIMAGE_LABEL_SW;
+	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_SW); end;
+	UIDropDownMenu_AddButton(info);
+
+	info = { };
+	info.text = MINIMAGE_LABEL_THERAMORE;
+	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_THERAMORE); end;
 	UIDropDownMenu_AddButton(info);
 
 	info = { };
@@ -213,22 +218,27 @@ function MM_DropDown_ForTheAlliance()
 	UIDropDownMenu_AddButton(info);
 
 	info = { };
-	info.text = MINIMAGE_LABEL_ALLIANCE3;
-	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_ALLIANCE3); end;
+	info.text = MINIMAGE_LABEL_ALAH;
+	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_ALAH); end;
 	UIDropDownMenu_AddButton(info);
 
 	info = { };
-	info.text = MINIMAGE_LABEL_ALLIANCE0;
-	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_ALLIANCE0); end;
+	info.text = MINIMAGE_LABEL_DARNASSUS;
+	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_DARNASSUS); end;
 	UIDropDownMenu_AddButton(info);
 
 	info = { };
-	info.text = MINIMAGE_LABEL_ALLIANCE1;
-	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_ALLIANCE1); end;
+	info.text = MINIMAGE_LABEL_IF;
+	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_IF); end;
 	UIDropDownMenu_AddButton(info);
 
 	info = { };
-	info.text = MINIMAGE_LABEL_ALLIANCE2;
-	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_ALLIANCE2); end;
+	info.text = MINIMAGE_LABEL_SW;
+	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_SW); end;
+	UIDropDownMenu_AddButton(info);
+
+	info = { };
+	info.text = MINIMAGE_LABEL_THERAMORE;
+	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_THERAMORE); end;
 	UIDropDownMenu_AddButton(info);
 end

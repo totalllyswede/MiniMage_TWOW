@@ -18,20 +18,25 @@ MINIMAGE_ANNOUNCE_DISABLED = ". MiniMage_TWOW AddOn Disabled.";
 MINIMAGE_ANNOUNCE_ENABLED  = ". MiniMage_TWOW AddOn Enabled.";
 MINIMAGE_ANNOUNCE_GREETING = "Greetings, ";
 
-MINIMAGE_BUTTON_TOOLTIP0 = "MiniMage_TWOW";
-MINIMAGE_BUTTON_TOOLTIP1 = "Left-click to open MiniMage_TWOW Cast Menu.";
+MINIMAGE_BUTTON_TOOLTIP0 = "MiniMage";
+MINIMAGE_BUTTON_TOOLTIP1 = "Left-click to open MiniMage Cast Menu.";
 MINIMAGE_BUTTON_TOOLTIP2 = "Right-click and drag to move this button.";
 
 MINIMAGE_LABEL_TITLE    = "Select Destination";
 MINIMAGE_LABEL_PORTAL   = "Portal";
 MINIMAGE_LABEL_TELEPORT = "Teleport";
 
-MINIMAGE_LABEL_ALLIANCE0 = "Darnassus";
-MINIMAGE_LABEL_ALLIANCE1 = "Ironforge";
-MINIMAGE_LABEL_ALLIANCE2 = "Stormwind";
-MINIMAGE_LABEL_ALLIANCE3 = "Alah'Thalas";
+MINIMAGE_LABEL_DARNASSUS = "Darnassus";
+MINIMAGE_LABEL_IF = "Ironforge";
+MINIMAGE_LABEL_SW = "Stormwind";
+MINIMAGE_LABEL_ALAH = "Alah'Thalas";
+MINIMAGE_LABEL_THERAMORE = "Theramore";
 
-MINIMAGE_LABEL_HORDE0 = "Orgrimmar";
-MINIMAGE_LABEL_HORDE1 = "Thunder Bluff";
-MINIMAGE_LABEL_HORDE2 = "Undercity";
-MINIMAGE_LABEL_HORDE3 = "Stonard"
+MINIMAGE_LABEL_ORG = "Orgrimmar";
+MINIMAGE_LABEL_TB = "Thunder Bluff";
+MINIMAGE_LABEL_UC = "Undercity";
+MINIMAGE_LABEL_STONARD = "Stonard";
+
+
+
+
