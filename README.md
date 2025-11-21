@@ -28,5 +28,6 @@ MiniMage_TWOW is a lightweight World of Warcraft addon designed for Mages, provi
 
 Feel free to fork, submit issues, or make pull requests.
 
+## Screenshots
 
 ![MiniMage_TWOW](https://github.com/user-attachments/assets/f5822ba0-5a25-41a6-b685-a0130fcf37ae)
