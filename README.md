@@ -9,8 +9,8 @@ MiniMage_TWOW is a lightweight World of Warcraft addon designed for Mages, provi
 
 
 ## TurtleWoW Specific Features
- * Includes Teleport: Alah'Thalas and Portal: Alah'Thalas for Alliance characters.
- * Includes Teleport: Stonard and Portal: Stonard for Horde characters.
+ * Includes Alah'Thalas and Theramore for Alliance characters.
+ * Includes Stonard for Horde characters.
 
 ## Features
 
