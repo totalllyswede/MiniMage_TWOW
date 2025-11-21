@@ -39,4 +39,5 @@ Feel free to fork, submit issues, or make pull requests.
 
 ## Screenshots
 
-![MiniMage_TWOW](https://github.com/user-attachments/assets/f5822ba0-5a25-41a6-b685-a0130fcf37ae)
+![MiniMage_TWOWa](https://github.com/user-attachments/assets/ed95ae31-580e-49ae-b469-eca9d63a2328)
+
