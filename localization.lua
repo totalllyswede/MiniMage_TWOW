@@ -13,12 +13,12 @@ MINIMAGE_VERSION = "1.18";
 --]]
 
 
-MINIMAGE_ANNOUNCE_DISABLED = ". MiniMage AddOn Disabled.";
-MINIMAGE_ANNOUNCE_ENABLED  = ". MiniMage AddOn Enabled.";
+MINIMAGE_ANNOUNCE_DISABLED = ". MiniMage_TWOW AddOn Disabled.";
+MINIMAGE_ANNOUNCE_ENABLED  = ". iniMage_TWOW AddOn Enabled.";
 MINIMAGE_ANNOUNCE_GREETING = "Greetings, ";
 
-MINIMAGE_BUTTON_TOOLTIP0 = "MiniMage";
-MINIMAGE_BUTTON_TOOLTIP1 = "Left-click to open MiniMage Cast Menu.";
+MINIMAGE_BUTTON_TOOLTIP0 = "iniMage_TWOW";
+MINIMAGE_BUTTON_TOOLTIP1 = "Left-click to open iniMage_TWOW Cast Menu.";
 MINIMAGE_BUTTON_TOOLTIP2 = "Right-click and drag to move this button.";
 
 MINIMAGE_LABEL_TITLE    = "Select Destination";
