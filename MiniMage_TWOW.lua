@@ -191,6 +191,15 @@ function MM_DropDown_ForTheAlliance()
 	info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_ALLIANCE2); end;
 	UIDropDownMenu_AddButton(info);
 
+	-- Custom Portal: Alah'Thalas
+local info = { }
+info.text = "Alah'Thalas"
+info.func = function(msg)
+    CastSpellByName("Portal: Alah'Thalas")
+end
+UIDropDownMenu_AddButton(info)
+
+
 	info = { };
 	info.text = MINIMAGE_LABEL_TELEPORT;
 	info.isTitle = 1;
@@ -219,6 +228,7 @@ info.func = function(msg)
     CastSpellByName("Teleport: Alah'Thalas");
 end;
 UIDropDownMenu_AddButton(info);
+
 
 
 end
