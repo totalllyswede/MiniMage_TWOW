@@ -31,7 +31,7 @@ The launcher will automatically download and install the addon and keep it updat
 ### Manual Install
 
 1. Download the repository into your `Interface/AddOns/` folder.
-2. Ensure the folder structure is `MiniMage_TWOW/MiniMage.lua`.
+2. Ensure the folder structure is `MiniMage_TWOW/MiniMage_TWOW.lua`.
 3. Reload the UI or restart WoW.
 
 ## Usage
