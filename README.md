@@ -41,7 +41,7 @@ The launcher will automatically download and install the addon and keep it updat
 
 ## Contributing
 
-Feel free to fork, submit issues, or make pull requests.
+Let me know if you have any issues, I'll fix it if I am able to.
 
 ## Screenshots
 
