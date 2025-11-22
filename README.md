@@ -38,7 +38,7 @@ The launcher will automatically download and install the addon and keep it updat
 
 * Click the minimap button to open the dropdown menu.
 * Select the desired portal or teleport.
-###/mmage
+### /mmage
 * /mmage help  -  Show Commands
 * /mmage icon  -  Show/Hide Minimap Icon
 * /mmage portals  -  Show/Hide Portals from Menu
