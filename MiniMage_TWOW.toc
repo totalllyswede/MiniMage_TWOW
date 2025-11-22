@@ -3,5 +3,6 @@
 ## Version: 1.0
 ## Notes: Forked version of MiniMage 1.2b. No original GitHub Repo found, only found in Wow1.12.1_Addons_Collection
 ## SavedVariables: MiniMageOptions
-MiniMage_TWOW.xml
 localization.lua
+MiniMage_TWOW.lua
+MiniMage_TWOW.xml
