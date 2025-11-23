@@ -1,3 +1,5 @@
+local MM_Initialized = false
+
 --
 -- Global variable for storage of settings/options
 --
@@ -16,6 +18,8 @@ function class_OnLoad()
 end
 
 function MM_Initialize()
+    if MM_Initialized then return end
+    MM_Initialized = true
     MM_fac = UnitFactionGroup('player');
     M_class = UnitClass("player");
     if (M_class == "Mage") then
