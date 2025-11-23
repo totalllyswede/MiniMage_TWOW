@@ -1,6 +1,6 @@
 
 --the only place MINIMAGE_VERSION should be set
-MINIMAGE_VERSION = "1.0";
+MINIMAGE_VERSION = "1.1";
 
 
 --[[

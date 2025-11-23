@@ -99,6 +99,18 @@ function MM_Button_UpdatePosition()
 end
 
 --
+-- ADDED: REQUIRED LEVEL CHECKS
+--
+
+function MM_CanCastTeleport()
+    return UnitLevel("player") >= 20;
+end
+
+function MM_CanCastPortal()
+    return UnitLevel("player") >= 40;
+end
+
+--
 -- Drop down menu functions
 --
 
@@ -135,24 +147,48 @@ function MM_DropDown_ForTheHorde()
         info.notCheckable = 1;
         UIDropDownMenu_AddButton(info);
 
+        -- ORG PORTAL
         info = { };
         info.text = MINIMAGE_LABEL_ORG;
-        info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_ORG); end;
+        info.disabled = not MM_CanCastPortal();
+        info.func = function(msg)
+            if MM_CanCastPortal() then
+                CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_ORG);
+            end
+        end;
         UIDropDownMenu_AddButton(info);
 
+        -- STONARD PORTAL
         info = { };
         info.text = MINIMAGE_LABEL_STONARD;
-        info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_STONARD); end;
+        info.disabled = not MM_CanCastPortal();
+        info.func = function(msg)
+            if MM_CanCastPortal() then
+                CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_STONARD);
+            end
+        end;
         UIDropDownMenu_AddButton(info);
 
+        -- TB PORTAL
         info = { };
         info.text = MINIMAGE_LABEL_TB;
-        info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_TB); end;
+        info.disabled = not MM_CanCastPortal();
+        info.func = function(msg)
+            if MM_CanCastPortal() then
+                CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_TB);
+            end
+        end;
         UIDropDownMenu_AddButton(info);
 
+        -- UC PORTAL
         info = { };
         info.text = MINIMAGE_LABEL_UC;
-        info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_UC); end;
+        info.disabled = not MM_CanCastPortal();
+        info.func = function(msg)
+            if MM_CanCastPortal() then
+                CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_UC);
+            end
+        end;
         UIDropDownMenu_AddButton(info);
     end
 
@@ -163,24 +199,48 @@ function MM_DropDown_ForTheHorde()
     info.notCheckable = 1;
     UIDropDownMenu_AddButton(info);
 
+    -- ORG TELEPORT
     info = { };
     info.text = MINIMAGE_LABEL_ORG;
-    info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_ORG); end;
+    info.disabled = not MM_CanCastTeleport();
+    info.func = function(msg)
+        if MM_CanCastTeleport() then
+            CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_ORG);
+        end
+    end;
     UIDropDownMenu_AddButton(info);
 
+    -- STONARD TELEPORT
     info = { };
     info.text = MINIMAGE_LABEL_STONARD;
-    info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_STONARD); end;
+    info.disabled = not MM_CanCastTeleport();
+    info.func = function(msg)
+        if MM_CanCastTeleport() then
+            CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_STONARD);
+        end
+    end;
     UIDropDownMenu_AddButton(info);
 
+    -- TB TELEPORT
     info = { };
     info.text = MINIMAGE_LABEL_TB;
-    info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_TB); end;
+    info.disabled = not MM_CanCastTeleport();
+    info.func = function(msg)
+        if MM_CanCastTeleport() then
+            CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_TB);
+        end
+    end;
     UIDropDownMenu_AddButton(info);
 
+    -- UC TELEPORT
     info = { };
     info.text = MINIMAGE_LABEL_UC;
-    info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_UC); end;
+    info.disabled = not MM_CanCastTeleport();
+    info.func = function(msg)
+        if MM_CanCastTeleport() then
+            CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_UC);
+        end
+    end;
     UIDropDownMenu_AddButton(info);
 end
 
@@ -195,29 +255,59 @@ function MM_DropDown_ForTheAlliance()
         info.notCheckable = 1;
         UIDropDownMenu_AddButton(info);
 
+        -- ALAH PORTAL
         info = { };
         info.text = MINIMAGE_LABEL_ALAH;
-        info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_ALAH); end;
+        info.disabled = not MM_CanCastPortal();
+        info.func = function(msg)
+            if MM_CanCastPortal() then
+                CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_ALAH);
+            end
+        end;
         UIDropDownMenu_AddButton(info);
 
+        -- DARNASSUS PORTAL
         info = { };
         info.text = MINIMAGE_LABEL_DARNASSUS;
-        info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_DARNASSUS); end;
+        info.disabled = not MM_CanCastPortal();
+        info.func = function(msg)
+            if MM_CanCastPortal() then
+                CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_DARNASSUS);
+            end
+        end;
         UIDropDownMenu_AddButton(info);
 
+        -- IF PORTAL
         info = { };
         info.text = MINIMAGE_LABEL_IF;
-        info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_IF); end;
+        info.disabled = not MM_CanCastPortal();
+        info.func = function(msg)
+            if MM_CanCastPortal() then
+                CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_IF);
+            end
+        end;
         UIDropDownMenu_AddButton(info);
 
+        -- SW PORTAL
         info = { };
         info.text = MINIMAGE_LABEL_SW;
-        info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_SW); end;
+        info.disabled = not MM_CanCastPortal();
+        info.func = function(msg)
+            if MM_CanCastPortal() then
+                CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_SW);
+            end
+        end;
         UIDropDownMenu_AddButton(info);
 
+        -- THERAMORE PORTAL
         info = { };
         info.text = MINIMAGE_LABEL_THERAMORE;
-        info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_THERAMORE); end;
+        info.disabled = not MM_CanCastPortal();
+        info.func = function(msg)
+            if MM_CanCastPortal() then
+                CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_THERAMORE);
+            end
+        end;
         UIDropDownMenu_AddButton(info);
     end
 
@@ -228,29 +318,59 @@ function MM_DropDown_ForTheAlliance()
     info.notCheckable = 1;
     UIDropDownMenu_AddButton(info);
 
+    -- ALAH TELEPORT
     info = { };
     info.text = MINIMAGE_LABEL_ALAH;
-    info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_ALAH); end;
+    info.disabled = not MM_CanCastTeleport();
+    info.func = function(msg)
+        if MM_CanCastTeleport() then
+            CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_ALAH);
+        end
+    end;
     UIDropDownMenu_AddButton(info);
 
+    -- DARN TELEPORT
     info = { };
     info.text = MINIMAGE_LABEL_DARNASSUS;
-    info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_DARNASSUS); end;
+    info.disabled = not MM_CanCastTeleport();
+    info.func = function(msg)
+        if MM_CanCastTeleport() then
+            CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_DARNASSUS);
+        end
+    end;
     UIDropDownMenu_AddButton(info);
 
+    -- IF TELEPORT
     info = { };
     info.text = MINIMAGE_LABEL_IF;
-    info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_IF); end;
+    info.disabled = not MM_CanCastTeleport();
+    info.func = function(msg)
+        if MM_CanCastTeleport() then
+            CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_IF);
+        end
+    end;
     UIDropDownMenu_AddButton(info);
 
+    -- SW TELEPORT
     info = { };
     info.text = MINIMAGE_LABEL_SW;
-    info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_SW); end;
+    info.disabled = not MM_CanCastTeleport();
+    info.func = function(msg)
+        if MM_CanCastTeleport() then
+            CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_SW);
+        end
+    end;
     UIDropDownMenu_AddButton(info);
 
+    -- THERAMORE TELEPORT
     info = { };
     info.text = MINIMAGE_LABEL_THERAMORE;
-    info.func = function(msg) CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_THERAMORE); end;
+    info.disabled = not MM_CanCastTeleport();
+    info.func = function(msg)
+        if MM_CanCastTeleport() then
+            CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_THERAMORE);
+        end
+    end;
     UIDropDownMenu_AddButton(info);
 end
 
