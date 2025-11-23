@@ -52,4 +52,4 @@ Let me know if you have any issues, I'll fix it if I am able to.
 
 ## Screenshots
 
-![MiniMage_TWOW (1)](https://github.com/user-attachments/assets/cd92f8b3-b473-4029-a41d-e33144aab79e)  ![MiniMage_TWOW (2)](https://github.com/user-attachments/assets/66263d98-0e99-4517-afa2-ff7f7c18c654)
+<img width="800" height="600" alt="ss1" src="https://github.com/user-attachments/assets/e1344159-2bd9-43a1-8edb-9b16e123d022" />
