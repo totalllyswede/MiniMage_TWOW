@@ -17,6 +17,8 @@ MiniMage_TWOW is a lightweight World of Warcraft addon designed for Mages, provi
 * **Minimap Button**: Drag and position a minimap button for easy access.
 * **Dropdown Menu**: Quick-cast portals and teleports, organized by faction.
 * **Faction Support**: Automatically shows relevant portal and teleport spells for Horde or Alliance Mages.
+* Teleport Section Greyed out Until Level 20
+* Portals Section Greyed out Until Level 40
 
 
 ## Installation
