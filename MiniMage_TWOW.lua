@@ -60,9 +60,8 @@ end
 
 --
 -- Minimap button drag/drop functions
---
-
 -- Thanks to Atlas for the button dragging code
+--
 
 function MM_Button_BeingDragged()
     local xpos,ypos = GetCursorPosition();
@@ -130,6 +129,11 @@ function MM_DropDown_InitButtons()
     info.isTitle = 1;
     info.justifyH = "CENTER";
     info.notCheckable = 1;
+
+    info.tooltipTitle = info.text
+    info.tooltipText = "Click to cast"
+    info.tooltipOnButton = true
+
     UIDropDownMenu_AddButton(info);
 
     local fact = UnitFactionGroup('player');
@@ -143,12 +147,16 @@ end
 function MM_DropDown_ForTheHorde()
     local appender = ': ';
 
-    -- PORTAL SECTION (hidden if HidePortals is true)
     if not MiniMageOptions.HidePortals then
         local info = { };
         info.text = MINIMAGE_LABEL_PORTAL;
         info.isTitle = 1;
         info.notCheckable = 1;
+
+        info.tooltipTitle = info.text
+        info.tooltipText = "Portal spells"
+        info.tooltipOnButton = true
+
         UIDropDownMenu_AddButton(info);
 
         -- ORG PORTAL
@@ -160,6 +168,11 @@ function MM_DropDown_ForTheHorde()
                 CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_ORG);
             end
         end;
+
+        info.tooltipTitle = info.text
+        info.tooltipText = "Portal to Orgrimmar"
+        info.tooltipOnButton = true
+
         UIDropDownMenu_AddButton(info);
 
         -- STONARD PORTAL
@@ -171,6 +184,11 @@ function MM_DropDown_ForTheHorde()
                 CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_STONARD);
             end
         end;
+
+        info.tooltipTitle = info.text
+        info.tooltipText = "Portal to Stonard"
+        info.tooltipOnButton = true
+
         UIDropDownMenu_AddButton(info);
 
         -- TB PORTAL
@@ -182,6 +200,11 @@ function MM_DropDown_ForTheHorde()
                 CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_TB);
             end
         end;
+
+        info.tooltipTitle = info.text
+        info.tooltipText = "Portal to Thunder Bluff"
+        info.tooltipOnButton = true
+
         UIDropDownMenu_AddButton(info);
 
         -- UC PORTAL
@@ -193,6 +216,11 @@ function MM_DropDown_ForTheHorde()
                 CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_UC);
             end
         end;
+
+        info.tooltipTitle = info.text
+        info.tooltipText = "Portal to Undercity"
+        info.tooltipOnButton = true
+
         UIDropDownMenu_AddButton(info);
     end
 
@@ -201,6 +229,11 @@ function MM_DropDown_ForTheHorde()
     info.text = MINIMAGE_LABEL_TELEPORT;
     info.isTitle = 1;
     info.notCheckable = 1;
+
+    info.tooltipTitle = info.text
+    info.tooltipText = "Teleport spells"
+    info.tooltipOnButton = true
+
     UIDropDownMenu_AddButton(info);
 
     -- ORG TELEPORT
@@ -212,6 +245,11 @@ function MM_DropDown_ForTheHorde()
             CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_ORG);
         end
     end;
+
+    info.tooltipTitle = info.text
+    info.tooltipText = "Teleport to Orgrimmar"
+    info.tooltipOnButton = true
+
     UIDropDownMenu_AddButton(info);
 
     -- STONARD TELEPORT
@@ -223,6 +261,11 @@ function MM_DropDown_ForTheHorde()
             CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_STONARD);
         end
     end;
+
+    info.tooltipTitle = info.text
+    info.tooltipText = "Teleport to Stonard"
+    info.tooltipOnButton = true
+
     UIDropDownMenu_AddButton(info);
 
     -- TB TELEPORT
@@ -234,6 +277,11 @@ function MM_DropDown_ForTheHorde()
             CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_TB);
         end
     end;
+
+    info.tooltipTitle = info.text
+    info.tooltipText = "Teleport to Thunder Bluff"
+    info.tooltipOnButton = true
+
     UIDropDownMenu_AddButton(info);
 
     -- UC TELEPORT
@@ -245,18 +293,27 @@ function MM_DropDown_ForTheHorde()
             CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_UC);
         end
     end;
+
+    info.tooltipTitle = info.text
+    info.tooltipText = "Teleport to Undercity"
+    info.tooltipOnButton = true
+
     UIDropDownMenu_AddButton(info);
 end
 
 function MM_DropDown_ForTheAlliance()
     local appender = ': ';
 
-    -- PORTAL SECTION (hidden if HidePortals is true)
     if not MiniMageOptions.HidePortals then
         local info = { };
         info.text = MINIMAGE_LABEL_PORTAL;
         info.isTitle = 1;
         info.notCheckable = 1;
+
+        info.tooltipTitle = info.text
+        info.tooltipText = "Portal spells"
+        info.tooltipOnButton = true
+
         UIDropDownMenu_AddButton(info);
 
         -- ALAH PORTAL
@@ -268,6 +325,11 @@ function MM_DropDown_ForTheAlliance()
                 CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_ALAH);
             end
         end;
+
+        info.tooltipTitle = info.text
+        info.tooltipText = "Portal to Aerie Peak"
+        info.tooltipOnButton = true
+
         UIDropDownMenu_AddButton(info);
 
         -- DARNASSUS PORTAL
@@ -279,6 +341,11 @@ function MM_DropDown_ForTheAlliance()
                 CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_DARNASSUS);
             end
         end;
+
+        info.tooltipTitle = info.text
+        info.tooltipText = "Portal to Darnassus"
+        info.tooltipOnButton = true
+
         UIDropDownMenu_AddButton(info);
 
         -- IF PORTAL
@@ -290,6 +357,11 @@ function MM_DropDown_ForTheAlliance()
                 CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_IF);
             end
         end;
+
+        info.tooltipTitle = info.text
+        info.tooltipText = "Portal to Ironforge"
+        info.tooltipOnButton = true
+
         UIDropDownMenu_AddButton(info);
 
         -- SW PORTAL
@@ -301,6 +373,11 @@ function MM_DropDown_ForTheAlliance()
                 CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_SW);
             end
         end;
+
+        info.tooltipTitle = info.text
+        info.tooltipText = "Portal to Stormwind"
+        info.tooltipOnButton = true
+
         UIDropDownMenu_AddButton(info);
 
         -- THERAMORE PORTAL
@@ -312,14 +389,24 @@ function MM_DropDown_ForTheAlliance()
                 CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_THERAMORE);
             end
         end;
+
+        info.tooltipTitle = info.text
+        info.tooltipText = "Portal to Theramore"
+        info.tooltipOnButton = true
+
         UIDropDownMenu_AddButton(info);
     end
 
-    -- TELEPORT SECTION
+    -- TELEPORT TITLE
     local info = { };
     info.text = MINIMAGE_LABEL_TELEPORT;
     info.isTitle = 1;
     info.notCheckable = 1;
+
+    info.tooltipTitle = info.text
+    info.tooltipText = "Teleport spells"
+    info.tooltipOnButton = true
+
     UIDropDownMenu_AddButton(info);
 
     -- ALAH TELEPORT
@@ -331,6 +418,11 @@ function MM_DropDown_ForTheAlliance()
             CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_ALAH);
         end
     end;
+
+    info.tooltipTitle = info.text
+    info.tooltipText = "Teleport to Aerie Peak"
+    info.tooltipOnButton = true
+
     UIDropDownMenu_AddButton(info);
 
     -- DARN TELEPORT
@@ -342,6 +434,11 @@ function MM_DropDown_ForTheAlliance()
             CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_DARNASSUS);
         end
     end;
+
+    info.tooltipTitle = info.text
+    info.tooltipText = "Teleport to Darnassus"
+    info.tooltipOnButton = true
+
     UIDropDownMenu_AddButton(info);
 
     -- IF TELEPORT
@@ -353,6 +450,11 @@ function MM_DropDown_ForTheAlliance()
             CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_IF);
         end
     end;
+
+    info.tooltipTitle = info.text
+    info.tooltipText = "Teleport to Ironforge"
+    info.tooltipOnButton = true
+
     UIDropDownMenu_AddButton(info);
 
     -- SW TELEPORT
@@ -364,6 +466,11 @@ function MM_DropDown_ForTheAlliance()
             CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_SW);
         end
     end;
+
+    info.tooltipTitle = info.text
+    info.tooltipText = "Teleport to Stormwind"
+    info.tooltipOnButton = true
+
     UIDropDownMenu_AddButton(info);
 
     -- THERAMORE TELEPORT
@@ -375,6 +482,11 @@ function MM_DropDown_ForTheAlliance()
             CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_THERAMORE);
         end
     end;
+
+    info.tooltipTitle = info.text
+    info.tooltipText = "Teleport to Theramore"
+    info.tooltipOnButton = true
+
     UIDropDownMenu_AddButton(info);
 end
 
@@ -412,9 +524,9 @@ SlashCmdList["MINIMAGE"] = function(msg)
     elseif msg == "help" or msg == "" then
         DEFAULT_CHAT_FRAME:AddMessage("|cffffff00MiniMage commands:|r")
         DEFAULT_CHAT_FRAME:AddMessage("/mmage help        - Show this help")
-        DEFAULT_CHAT_FRAME:AddMessage("/mmage icon      - Show/Hide minimap button")
+        DEFAULT_CHAT_FRAME:AddMessage("/mmage icon        - Show/Hide minimap button")
         DEFAULT_CHAT_FRAME:AddMessage("/mmage reset       - Reset addon saved options")
-        DEFAULT_CHAT_FRAME:AddMessage("/mmage portals - Show/Hide portal in dropdown")
+        DEFAULT_CHAT_FRAME:AddMessage("/mmage portals     - Show/Hide portal in dropdown")
 
     else
         DEFAULT_CHAT_FRAME:AddMessage("|cffff0000MiniMage: unknown command.|r")
