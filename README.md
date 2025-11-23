@@ -1,5 +1,4 @@
 # MiniMage_TWOW
-## Version 1.1
 
 MiniMage_TWOW is a lightweight World of Warcraft addon designed for Mages, providing quick access to portals and teleports via a convenient minimap button and dropdown menu. Perfect for both Horde and Alliance players, MiniMage_TWOW streamlines travel across Azeroth with just a click.
 
@@ -8,7 +7,7 @@ MiniMage_TWOW is a lightweight World of Warcraft addon designed for Mages, provi
 * I do not take credit for creating this addon, only modifying it to include TurtleWoW specific features
 
 
-
+# Version 1.1
 ## TurtleWoW Specific Features
  * Includes Alah'Thalas and Theramore for Alliance characters.
  * Includes Stonard for Horde characters.
