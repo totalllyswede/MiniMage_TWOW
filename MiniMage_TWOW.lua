@@ -165,7 +165,7 @@ function MM_DropDown_ForTheHorde()
         info.disabled = not MM_CanCastPortal();
         info.func = function(msg)
             if MM_CanCastPortal() then
-                CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_ORG);
+                MM_TryCast(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_ORG);
             end
         end;
 
@@ -181,7 +181,7 @@ function MM_DropDown_ForTheHorde()
         info.disabled = not MM_CanCastPortal();
         info.func = function(msg)
             if MM_CanCastPortal() then
-                CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_STONARD);
+                MM_TryCast(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_STONARD);
             end
         end;
 
@@ -197,7 +197,7 @@ function MM_DropDown_ForTheHorde()
         info.disabled = not MM_CanCastPortal();
         info.func = function(msg)
             if MM_CanCastPortal() then
-                CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_TB);
+                MM_TryCast(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_TB);
             end
         end;
 
@@ -213,7 +213,7 @@ function MM_DropDown_ForTheHorde()
         info.disabled = not MM_CanCastPortal();
         info.func = function(msg)
             if MM_CanCastPortal() then
-                CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_UC);
+                MM_TryCast(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_UC);
             end
         end;
 
@@ -242,7 +242,7 @@ function MM_DropDown_ForTheHorde()
     info.disabled = not MM_CanCastTeleport();
     info.func = function(msg)
         if MM_CanCastTeleport() then
-            CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_ORG);
+            MM_TryCast(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_ORG);
         end
     end;
 
@@ -258,7 +258,7 @@ function MM_DropDown_ForTheHorde()
     info.disabled = not MM_CanCastTeleport();
     info.func = function(msg)
         if MM_CanCastTeleport() then
-            CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_STONARD);
+            MM_TryCast(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_STONARD);
         end
     end;
 
@@ -274,7 +274,7 @@ function MM_DropDown_ForTheHorde()
     info.disabled = not MM_CanCastTeleport();
     info.func = function(msg)
         if MM_CanCastTeleport() then
-            CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_TB);
+            MM_TryCast(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_TB);
         end
     end;
 
@@ -290,7 +290,7 @@ function MM_DropDown_ForTheHorde()
     info.disabled = not MM_CanCastTeleport();
     info.func = function(msg)
         if MM_CanCastTeleport() then
-            CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_UC);
+            MM_TryCast(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_UC);
         end
     end;
 
@@ -322,7 +322,7 @@ function MM_DropDown_ForTheAlliance()
         info.disabled = not MM_CanCastPortal();
         info.func = function(msg)
             if MM_CanCastPortal() then
-                CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_ALAH);
+                MM_TryCast(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_ALAH);
             end
         end;
 
@@ -338,7 +338,7 @@ function MM_DropDown_ForTheAlliance()
         info.disabled = not MM_CanCastPortal();
         info.func = function(msg)
             if MM_CanCastPortal() then
-                CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_DARNASSUS);
+                MM_TryCast(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_DARNASSUS);
             end
         end;
 
@@ -354,7 +354,7 @@ function MM_DropDown_ForTheAlliance()
         info.disabled = not MM_CanCastPortal();
         info.func = function(msg)
             if MM_CanCastPortal() then
-                CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_IF);
+                MM_TryCast(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_IF);
             end
         end;
 
@@ -370,7 +370,7 @@ function MM_DropDown_ForTheAlliance()
         info.disabled = not MM_CanCastPortal();
         info.func = function(msg)
             if MM_CanCastPortal() then
-                CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_SW);
+                MM_TryCast(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_SW);
             end
         end;
 
@@ -386,7 +386,7 @@ function MM_DropDown_ForTheAlliance()
         info.disabled = not MM_CanCastPortal();
         info.func = function(msg)
             if MM_CanCastPortal() then
-                CastSpellByName(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_THERAMORE);
+                MM_TryCast(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_THERAMORE);
             end
         end;
 
@@ -415,7 +415,7 @@ function MM_DropDown_ForTheAlliance()
     info.disabled = not MM_CanCastTeleport();
     info.func = function(msg)
         if MM_CanCastTeleport() then
-            CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_ALAH);
+            MM_TryCast(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_ALAH);
         end
     end;
 
@@ -431,7 +431,7 @@ function MM_DropDown_ForTheAlliance()
     info.disabled = not MM_CanCastTeleport();
     info.func = function(msg)
         if MM_CanCastTeleport() then
-            CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_DARNASSUS);
+            MM_TryCast(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_DARNASSUS);
         end
     end;
 
@@ -447,7 +447,7 @@ function MM_DropDown_ForTheAlliance()
     info.disabled = not MM_CanCastTeleport();
     info.func = function(msg)
         if MM_CanCastTeleport() then
-            CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_IF);
+            MM_TryCast(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_IF);
         end
     end;
 
@@ -463,7 +463,7 @@ function MM_DropDown_ForTheAlliance()
     info.disabled = not MM_CanCastTeleport();
     info.func = function(msg)
         if MM_CanCastTeleport() then
-            CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_SW);
+            MM_TryCast(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_SW);
         end
     end;
 
@@ -479,7 +479,7 @@ function MM_DropDown_ForTheAlliance()
     info.disabled = not MM_CanCastTeleport();
     info.func = function(msg)
         if MM_CanCastTeleport() then
-            CastSpellByName(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_THERAMORE);
+            MM_TryCast(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_THERAMORE);
         end
     end;
 
@@ -533,3 +533,52 @@ SlashCmdList["MINIMAGE"] = function(msg)
         DEFAULT_CHAT_FRAME:AddMessage("Type /mmage help for options.")
     end
 end
+
+-- ===== ADDED: Minimal cast tracking + wrapper + error listener + spell check =====
+
+-- Track last attempted spell cast
+local MM_LastAttemptedSpell = nil
+local MM_LastAttemptTime = 0
+
+-- Check if player knows the spell
+function MM_HasSpell(spellName)
+    for i=1, GetNumSpellTabs() do
+        local _, _, offset, numSpells = GetSpellTabInfo(i)
+        for j=1, numSpells do
+            local name = GetSpellName(j + offset, BOOKTYPE_SPELL)
+            if name == spellName then
+                return true
+            end
+        end
+    end
+    return false
+end
+
+-- Wrapper to track attempts and check if learned
+function MM_TryCast(spellName)
+    if not MM_HasSpell(spellName) then
+        DEFAULT_CHAT_FRAME:AddMessage("|cffff0000You Have Not Learned " .. spellName .. ".|r")
+        return
+    end
+    MM_LastAttemptedSpell = spellName
+    MM_LastAttemptTime = GetTime()
+    CastSpellByName(spellName)
+end
+
+-- Event frame to listen for UI error messages and show custom text
+local MM_EventFrame = CreateFrame("Frame")
+MM_EventFrame:RegisterEvent("UI_ERROR_MESSAGE")
+
+MM_EventFrame:SetScript("OnEvent", function(self, event, message)
+    local now = GetTime()
+
+    -- Only react if the error happens within 1 second of our own click
+    if MM_LastAttemptedSpell and (now - MM_LastAttemptTime) < 1.0 then
+        -- Any standard "failed" message triggers custom output
+        if message then
+            DEFAULT_CHAT_FRAME:AddMessage("|cffff0000You Have Not Learned " .. MM_LastAttemptedSpell .. ".|r")
+        end
+        MM_LastAttemptedSpell = nil
+        MM_LastAttemptTime = 0
+    end
+end)

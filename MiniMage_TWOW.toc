@@ -1,6 +1,6 @@
 ## Interface: 11200
 ## Title: MiniMage_TWOW
-## Version: 1.1
+## Version: 1.2
 ## Notes: Forked version of MiniMage 1.2b. No original GitHub Repo found, only found in Wow1.12.1_Addons_Collection
 ## SavedVariables: MiniMageOptions
 localization.lua
