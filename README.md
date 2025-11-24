@@ -7,7 +7,7 @@ MiniMage_TWOW is a lightweight World of Warcraft addon designed for Mages, provi
 * I do not take credit for creating this addon, only modifying it to include TurtleWoW specific features
 
 
-# Version 1.1
+# Version 1.2
 ## TurtleWoW Specific Features
  * Includes Alah'Thalas and Theramore for Alliance characters.
  * Includes Stonard for Horde characters.
@@ -19,6 +19,7 @@ MiniMage_TWOW is a lightweight World of Warcraft addon designed for Mages, provi
 * **Faction Support**: Automatically shows relevant portal and teleport spells for Horde or Alliance Mages.
 * Teleport Section Greyed out Until Level 20
 * Portals Section Greyed out Until Level 40
+* "Haven't Learned Spell" Message when trying to cast a Teleport/Portal you don't have trained.
 
 
 ## Installation
