@@ -154,7 +154,7 @@ end
 
 function MM_DropDown_InitButtons()
     local info = {};
-    info.text = MINIMAGE_LABEL_TITLE;
+    info.text = "|cff00ff00"..MINIMAGE_LABEL_TITLE.."|r";
     info.isTitle = 1;
     info.justifyH = "CENTER";
     info.notCheckable = 1;
@@ -471,7 +471,6 @@ SlashCmdList["MINIMAGE"] = function(msg)
         DEFAULT_CHAT_FRAME:AddMessage("/mmage help        - Show this help")
         DEFAULT_CHAT_FRAME:AddMessage("/mmage icon        - Show/Hide minimap button")
         DEFAULT_CHAT_FRAME:AddMessage("/mmage reset       - Reset addon saved options")
-        DEFAULT_CHAT_FRAME:AddMessage("/mmage portals     - Show/Hide portal in dropdown")
 
     else
         DEFAULT_CHAT_FRAME:AddMessage("|cffff0000MiniMage: unknown command.|r")

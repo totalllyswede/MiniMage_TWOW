@@ -22,7 +22,7 @@ MINIMAGE_BUTTON_TOOLTIP0 = "MiniMage";
 MINIMAGE_BUTTON_TOOLTIP1 = "Left-click to open MiniMage Cast Menu.";
 MINIMAGE_BUTTON_TOOLTIP2 = "Right-click and drag to move this button.";
 
-MINIMAGE_LABEL_TITLE    = "Select Destination";
+MINIMAGE_LABEL_TITLE    = "MiniMage";
 MINIMAGE_LABEL_PORTAL   = "Portal";
 MINIMAGE_LABEL_TELEPORT = "Teleport";
 
