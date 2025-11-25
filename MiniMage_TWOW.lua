@@ -129,8 +129,8 @@ local MM_SpellLevels = {
     ["Teleport: Darnassus"] = 30,
     ["Portal: Darnassus"]   = 50,
 
-    ["Teleport: Theramore"] = 40,
-    ["Portal: Theramore"]   = 60,
+    ["Teleport: Theramore"] = 30,
+    ["Portal: Theramore"]   = 50,
 
     ["Teleport: Alah'Thalas"] = 20,
     ["Portal: Alah'Thalas"]   = 40,
