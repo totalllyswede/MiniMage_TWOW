@@ -102,15 +102,44 @@ function MM_Button_UpdatePosition()
 end
 
 --
--- ADDED: REQUIRED LEVEL CHECKS
+-- Required level table (unchanged)
 --
 
-function MM_CanCastTeleport()
-    return UnitLevel("player") >= 20;
-end
+local MM_SpellLevels = {
+    -- Horde
+    ["Teleport: Orgrimmar"] = 20,
+    ["Portal: Orgrimmar"]   = 40,
 
-function MM_CanCastPortal()
-    return UnitLevel("player") >= 40;
+    ["Teleport: Thunder Bluff"] = 30,
+    ["Portal: Thunder Bluff"]   = 50,
+
+    ["Teleport: Undercity"] = 20,
+    ["Portal: Undercity"]   = 40,
+
+    ["Teleport: Stonard"] = 20,
+    ["Portal: Stonard"]   = 40,
+
+    -- Alliance
+    ["Teleport: Stormwind"] = 20,
+    ["Portal: Stormwind"]   = 40,
+
+    ["Teleport: Ironforge"] = 20,
+    ["Portal: Ironforge"]   = 40,
+
+    ["Teleport: Darnassus"] = 30,
+    ["Portal: Darnassus"]   = 50,
+
+    ["Teleport: Theramore"] = 40,
+    ["Portal: Theramore"]   = 60,
+
+    ["Teleport: Alah'Thalas"] = 20,
+    ["Portal: Alah'Thalas"]   = 40,
+}
+
+function MM_CanCastSpell(spellName)
+    local req = MM_SpellLevels[spellName]
+    if not req then return true end
+    return UnitLevel("player") >= req
 end
 
 --
@@ -144,8 +173,17 @@ function MM_DropDown_InitButtons()
     end
 end
 
+-----------------------------------------------------
+-- HORDE
+-----------------------------------------------------
+
 function MM_DropDown_ForTheHorde()
     local appender = ': ';
+
+    -- 🔥 REQUIRED ADDITION: Auto-hide portals if player level < 40
+    if UnitLevel("player") < 40 then
+        MiniMageOptions.HidePortals = true
+    end
 
     if not MiniMageOptions.HidePortals then
         local info = { };
@@ -162,65 +200,45 @@ function MM_DropDown_ForTheHorde()
         -- ORG PORTAL
         info = { };
         info.text = MINIMAGE_LABEL_ORG;
-        info.disabled = not MM_CanCastPortal();
+        info.disabled = not MM_CanCastSpell("Portal: Orgrimmar");
         info.func = function(msg)
-            if MM_CanCastPortal() then
+            if MM_CanCastSpell("Portal: Orgrimmar") then
                 MM_TryCast(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_ORG);
             end
         end;
-
-        info.tooltipTitle = info.text
-        info.tooltipText = "Portal to Orgrimmar"
-        info.tooltipOnButton = true
-
         UIDropDownMenu_AddButton(info);
 
         -- STONARD PORTAL
         info = { };
         info.text = MINIMAGE_LABEL_STONARD;
-        info.disabled = not MM_CanCastPortal();
+        info.disabled = not MM_CanCastSpell("Portal: Stonard");
         info.func = function(msg)
-            if MM_CanCastPortal() then
+            if MM_CanCastSpell("Portal: Stonard") then
                 MM_TryCast(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_STONARD);
             end
         end;
-
-        info.tooltipTitle = info.text
-        info.tooltipText = "Portal to Stonard"
-        info.tooltipOnButton = true
-
         UIDropDownMenu_AddButton(info);
 
         -- TB PORTAL
         info = { };
         info.text = MINIMAGE_LABEL_TB;
-        info.disabled = not MM_CanCastPortal();
+        info.disabled = not MM_CanCastSpell("Portal: Thunder Bluff");
         info.func = function(msg)
-            if MM_CanCastPortal() then
+            if MM_CanCastSpell("Portal: Thunder Bluff") then
                 MM_TryCast(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_TB);
             end
         end;
-
-        info.tooltipTitle = info.text
-        info.tooltipText = "Portal to Thunder Bluff"
-        info.tooltipOnButton = true
-
         UIDropDownMenu_AddButton(info);
 
         -- UC PORTAL
         info = { };
         info.text = MINIMAGE_LABEL_UC;
-        info.disabled = not MM_CanCastPortal();
+        info.disabled = not MM_CanCastSpell("Portal: Undercity");
         info.func = function(msg)
-            if MM_CanCastPortal() then
+            if MM_CanCastSpell("Portal: Undercity") then
                 MM_TryCast(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_UC);
             end
         end;
-
-        info.tooltipTitle = info.text
-        info.tooltipText = "Portal to Undercity"
-        info.tooltipOnButton = true
-
         UIDropDownMenu_AddButton(info);
     end
 
@@ -230,79 +248,64 @@ function MM_DropDown_ForTheHorde()
     info.isTitle = 1;
     info.notCheckable = 1;
 
-    info.tooltipTitle = info.text
-    info.tooltipText = "Teleport spells"
-    info.tooltipOnButton = true
-
     UIDropDownMenu_AddButton(info);
 
     -- ORG TELEPORT
     info = { };
     info.text = MINIMAGE_LABEL_ORG;
-    info.disabled = not MM_CanCastTeleport();
+    info.disabled = not MM_CanCastSpell("Teleport: Orgrimmar");
     info.func = function(msg)
-        if MM_CanCastTeleport() then
+        if MM_CanCastSpell("Teleport: Orgrimmar") then
             MM_TryCast(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_ORG);
         end
     end;
-
-    info.tooltipTitle = info.text
-    info.tooltipText = "Teleport to Orgrimmar"
-    info.tooltipOnButton = true
-
     UIDropDownMenu_AddButton(info);
 
     -- STONARD TELEPORT
     info = { };
     info.text = MINIMAGE_LABEL_STONARD;
-    info.disabled = not MM_CanCastTeleport();
+    info.disabled = not MM_CanCastSpell("Teleport: Stonard");
     info.func = function(msg)
-        if MM_CanCastTeleport() then
+        if MM_CanCastSpell("Teleport: Stonard") then
             MM_TryCast(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_STONARD);
         end
     end;
-
-    info.tooltipTitle = info.text
-    info.tooltipText = "Teleport to Stonard"
-    info.tooltipOnButton = true
-
     UIDropDownMenu_AddButton(info);
 
     -- TB TELEPORT
     info = { };
     info.text = MINIMAGE_LABEL_TB;
-    info.disabled = not MM_CanCastTeleport();
+    info.disabled = not MM_CanCastSpell("Teleport: Thunder Bluff");
     info.func = function(msg)
-        if MM_CanCastTeleport() then
+        if MM_CanCastSpell("Teleport: Thunder Bluff") then
             MM_TryCast(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_TB);
         end
     end;
-
-    info.tooltipTitle = info.text
-    info.tooltipText = "Teleport to Thunder Bluff"
-    info.tooltipOnButton = true
-
     UIDropDownMenu_AddButton(info);
 
     -- UC TELEPORT
     info = { };
     info.text = MINIMAGE_LABEL_UC;
-    info.disabled = not MM_CanCastTeleport();
+    info.disabled = not MM_CanCastSpell("Teleport: Undercity");
     info.func = function(msg)
-        if MM_CanCastTeleport() then
+        if MM_CanCastSpell("Teleport: Undercity") then
             MM_TryCast(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_UC);
         end
     end;
-
-    info.tooltipTitle = info.text
-    info.tooltipText = "Teleport to Undercity"
-    info.tooltipOnButton = true
-
     UIDropDownMenu_AddButton(info);
 end
 
+-----------------------------------------------------
+-- ALLIANCE
+-----------------------------------------------------
+
 function MM_DropDown_ForTheAlliance()
     local appender = ': ';
+
+    -- 🔥 REQUIRED ADDITION: Auto-hide portals if player level < 40
+    if UnitLevel("player") < 40 then
+        MiniMageOptions.HidePortals = true
+    end
 
     if not MiniMageOptions.HidePortals then
         local info = { };
@@ -310,90 +313,61 @@ function MM_DropDown_ForTheAlliance()
         info.isTitle = 1;
         info.notCheckable = 1;
 
-        info.tooltipTitle = info.text
-        info.tooltipText = "Portal spells"
-        info.tooltipOnButton = true
-
         UIDropDownMenu_AddButton(info);
 
         -- ALAH PORTAL
         info = { };
         info.text = MINIMAGE_LABEL_ALAH;
-        info.disabled = not MM_CanCastPortal();
+        info.disabled = not MM_CanCastSpell("Portal: Alah'Thalas");
         info.func = function(msg)
-            if MM_CanCastPortal() then
+            if MM_CanCastSpell("Portal: Alah'Thalas") then
                 MM_TryCast(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_ALAH);
             end
         end;
-
-        info.tooltipTitle = info.text
-        info.tooltipText = "Portal to Aerie Peak"
-        info.tooltipOnButton = true
-
         UIDropDownMenu_AddButton(info);
 
         -- DARNASSUS PORTAL
         info = { };
         info.text = MINIMAGE_LABEL_DARNASSUS;
-        info.disabled = not MM_CanCastPortal();
+        info.disabled = not MM_CanCastSpell("Portal: Darnassus");
         info.func = function(msg)
-            if MM_CanCastPortal() then
+            if MM_CanCastSpell("Portal: Darnassus") then
                 MM_TryCast(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_DARNASSUS);
             end
         end;
-
-        info.tooltipTitle = info.text
-        info.tooltipText = "Portal to Darnassus"
-        info.tooltipOnButton = true
-
         UIDropDownMenu_AddButton(info);
 
         -- IF PORTAL
         info = { };
         info.text = MINIMAGE_LABEL_IF;
-        info.disabled = not MM_CanCastPortal();
+        info.disabled = not MM_CanCastSpell("Portal: Ironforge");
         info.func = function(msg)
-            if MM_CanCastPortal() then
+            if MM_CanCastSpell("Portal: Ironforge") then
                 MM_TryCast(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_IF);
             end
         end;
-
-        info.tooltipTitle = info.text
-        info.tooltipText = "Portal to Ironforge"
-        info.tooltipOnButton = true
-
         UIDropDownMenu_AddButton(info);
 
         -- SW PORTAL
         info = { };
         info.text = MINIMAGE_LABEL_SW;
-        info.disabled = not MM_CanCastPortal();
+        info.disabled = not MM_CanCastSpell("Portal: Stormwind");
         info.func = function(msg)
-            if MM_CanCastPortal() then
+            if MM_CanCastSpell("Portal: Stormwind") then
                 MM_TryCast(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_SW);
             end
         end;
-
-        info.tooltipTitle = info.text
-        info.tooltipText = "Portal to Stormwind"
-        info.tooltipOnButton = true
-
         UIDropDownMenu_AddButton(info);
 
         -- THERAMORE PORTAL
         info = { };
         info.text = MINIMAGE_LABEL_THERAMORE;
-        info.disabled = not MM_CanCastPortal();
+        info.disabled = not MM_CanCastSpell("Portal: Theramore");
         info.func = function(msg)
-            if MM_CanCastPortal() then
+            if MM_CanCastSpell("Portal: Theramore") then
                 MM_TryCast(MINIMAGE_LABEL_PORTAL..appender..MINIMAGE_LABEL_THERAMORE);
             end
         end;
-
-        info.tooltipTitle = info.text
-        info.tooltipText = "Portal to Theramore"
-        info.tooltipOnButton = true
-
         UIDropDownMenu_AddButton(info);
     end
 
@@ -403,90 +377,61 @@ function MM_DropDown_ForTheAlliance()
     info.isTitle = 1;
     info.notCheckable = 1;
 
-    info.tooltipTitle = info.text
-    info.tooltipText = "Teleport spells"
-    info.tooltipOnButton = true
-
     UIDropDownMenu_AddButton(info);
 
     -- ALAH TELEPORT
     info = { };
     info.text = MINIMAGE_LABEL_ALAH;
-    info.disabled = not MM_CanCastTeleport();
+    info.disabled = not MM_CanCastSpell("Teleport: Alah'Thalas");
     info.func = function(msg)
-        if MM_CanCastTeleport() then
+        if MM_CanCastSpell("Teleport: Alah'Thalas") then
             MM_TryCast(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_ALAH);
         end
     end;
-
-    info.tooltipTitle = info.text
-    info.tooltipText = "Teleport to Aerie Peak"
-    info.tooltipOnButton = true
-
     UIDropDownMenu_AddButton(info);
 
     -- DARN TELEPORT
     info = { };
     info.text = MINIMAGE_LABEL_DARNASSUS;
-    info.disabled = not MM_CanCastTeleport();
+    info.disabled = not MM_CanCastSpell("Teleport: Darnassus");
     info.func = function(msg)
-        if MM_CanCastTeleport() then
+        if MM_CanCastSpell("Teleport: Darnassus") then
             MM_TryCast(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_DARNASSUS);
         end
     end;
-
-    info.tooltipTitle = info.text
-    info.tooltipText = "Teleport to Darnassus"
-    info.tooltipOnButton = true
-
     UIDropDownMenu_AddButton(info);
 
     -- IF TELEPORT
     info = { };
     info.text = MINIMAGE_LABEL_IF;
-    info.disabled = not MM_CanCastTeleport();
+    info.disabled = not MM_CanCastSpell("Teleport: Ironforge");
     info.func = function(msg)
-        if MM_CanCastTeleport() then
+        if MM_CanCastSpell("Teleport: Ironforge") then
             MM_TryCast(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_IF);
         end
     end;
-
-    info.tooltipTitle = info.text
-    info.tooltipText = "Teleport to Ironforge"
-    info.tooltipOnButton = true
-
     UIDropDownMenu_AddButton(info);
 
     -- SW TELEPORT
     info = { };
     info.text = MINIMAGE_LABEL_SW;
-    info.disabled = not MM_CanCastTeleport();
+    info.disabled = not MM_CanCastSpell("Teleport: Stormwind");
     info.func = function(msg)
-        if MM_CanCastTeleport() then
+        if MM_CanCastSpell("Teleport: Stormwind") then
             MM_TryCast(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_SW);
         end
     end;
-
-    info.tooltipTitle = info.text
-    info.tooltipText = "Teleport to Stormwind"
-    info.tooltipOnButton = true
-
     UIDropDownMenu_AddButton(info);
 
     -- THERAMORE TELEPORT
     info = { };
     info.text = MINIMAGE_LABEL_THERAMORE;
-    info.disabled = not MM_CanCastTeleport();
+    info.disabled = not MM_CanCastSpell("Teleport: Theramore");
     info.func = function(msg)
-        if MM_CanCastTeleport() then
+        if MM_CanCastSpell("Teleport: Theramore") then
             MM_TryCast(MINIMAGE_LABEL_TELEPORT..appender..MINIMAGE_LABEL_THERAMORE);
         end
     end;
-
-    info.tooltipTitle = info.text
-    info.tooltipText = "Teleport to Theramore"
-    info.tooltipOnButton = true
-
     UIDropDownMenu_AddButton(info);
 end
 
@@ -534,13 +479,11 @@ SlashCmdList["MINIMAGE"] = function(msg)
     end
 end
 
--- ===== ADDED: Minimal cast tracking + wrapper + error listener + spell check =====
+-- ===== Cast tracking + learned-check =====
 
--- Track last attempted spell cast
 local MM_LastAttemptedSpell = nil
 local MM_LastAttemptTime = 0
 
--- Check if player knows the spell
 function MM_HasSpell(spellName)
     for i=1, GetNumSpellTabs() do
         local _, _, offset, numSpells = GetSpellTabInfo(i)
@@ -554,7 +497,6 @@ function MM_HasSpell(spellName)
     return false
 end
 
--- Wrapper to track attempts and check if learned
 function MM_TryCast(spellName)
     if not MM_HasSpell(spellName) then
         DEFAULT_CHAT_FRAME:AddMessage("|cffff0000You Have Not Learned " .. spellName .. ".|r")
@@ -565,16 +507,13 @@ function MM_TryCast(spellName)
     CastSpellByName(spellName)
 end
 
--- Event frame to listen for UI error messages and show custom text
 local MM_EventFrame = CreateFrame("Frame")
 MM_EventFrame:RegisterEvent("UI_ERROR_MESSAGE")
 
 MM_EventFrame:SetScript("OnEvent", function(self, event, message)
     local now = GetTime()
 
-    -- Only react if the error happens within 1 second of our own click
     if MM_LastAttemptedSpell and (now - MM_LastAttemptTime) < 1.0 then
-        -- Any standard "failed" message triggers custom output
         if message then
             DEFAULT_CHAT_FRAME:AddMessage("|cffff0000You Have Not Learned " .. MM_LastAttemptedSpell .. ".|r")
         end
