@@ -4,7 +4,7 @@ MiniMage_TWOW is a lightweight World of Warcraft addon designed for Mages, provi
 
 ## Original Addon
 * I found MiniMage_v1.2b in the Wow1.12.1_Addons_Collection, I cannot find the orginal GitHub or anywhere else this addon is posted.
-* I do not take credit for creating this addon, only modifying it to include TurtleWoW specific features
+* I do not take credit for creating this addon, only modifying it to include TurtleWoW specific spells and adding a few features
 
 
 # Version 1.3
