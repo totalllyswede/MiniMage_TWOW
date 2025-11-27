@@ -1,7 +1,7 @@
 ## Interface: 11200
 ## Title: MiniMage_TWOW
 ## Version: 1.4
-## Notes: Forked version of MiniMage 1.2b. No original GitHub Repo found, only found in Wow1.12.1_Addons_Collection
+## Notes: Minimap icon for TurtleWoW for quick and easy portals/teleports.
 ## SavedVariables: MiniMageOptions
 localization.lua
 MiniMage_TWOW.lua
