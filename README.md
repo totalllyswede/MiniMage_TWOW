@@ -7,7 +7,7 @@ MiniMage_TWOW is a lightweight World of Warcraft addon designed for Mages, provi
 * I do not take credit for creating this addon, only modifying it to include TurtleWoW specific spells and adding a few features
 
 
-# Version 1.4
+# Version 1.5
 ## TurtleWoW Specific Features
  * Includes Alah'Thalas and Theramore for Alliance characters.
  * Includes Stonard for Horde characters.
