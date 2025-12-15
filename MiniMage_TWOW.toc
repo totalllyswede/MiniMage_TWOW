@@ -1,6 +1,6 @@
 ## Interface: 11200
 ## Title: MiniMage_TWOW
-## Version: 1.4
+## Version: 1.5
 ## Notes: Minimap icon for TurtleWoW for quick and easy portals/teleports.
 ## SavedVariables: MiniMageOptions
 localization.lua
